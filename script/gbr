@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Git checkout new branch
+
+PAR=$1
+BRANCH=$2
+
+if [ ! -z $PAR ]; then
+    if [[ "$PAR" == "-d" || "$PAR" == "-rd" ]]; then
+        if [ -z $BRANCH ]; then
+            echo "You must enter a branch to delete."
+        else
+            if [ "$PAR" == "-d" ]; then
+                git branch -d "$BRANCH"
+                echo "Deleted local branch $BRANCH"
+            else
+                git push origin --delete "$BRANCH"
+                echo "Deleted remote branch $BRANCH"
+            fi
+        fi
+    else
+        git branch "$PAR"
+    fi
+else
+    git branch
+fi

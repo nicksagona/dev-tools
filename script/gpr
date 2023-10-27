@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Git checkout new branch
+
+LST=$1
+
+if [ ! -z $LST ]; then
+    git branch "$LST"
+else
+    git branch
+fi

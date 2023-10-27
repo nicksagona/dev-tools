@@ -38,10 +38,55 @@ $ gco branch
 $ gcb branch
 ```
 
-##### Git Commit (and Push)
+##### Git List Branches
+
+Local branches
 
 ```bash
-$ gac "Message"
+$ gbr
+```
+Remote branches
+
+```bash
+$ gbr -r
+```
+
+All branches
+
+```bash
+$ gbr -a
+```
+
+##### Git Delete Branch
+
+Delete local branch
+
+```bash
+$ gbr -d branch
+```
+
+Delete remote branch
+
+```bash
+$ gbr -rd branch
+```
+
+##### Git Prune Origin
+
+```bash
+$ gpr
+```
+
+##### Git Merge
+
+```bash
+$ gm branch
+```
+
+##### Git Commit and Push)
+
+```bash
+$ gcp "Message"
 ```
 
 ##### Git Stash

@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Git checkout new branch
+
+BRANCH=$1
+
+if [ -z $BRANCH ]; then
+    echo "You must enter a branch name."
+    exit 1
+fi
+
+git merge "$BRANCH"
