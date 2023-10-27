@@ -89,7 +89,7 @@ $ gpr
 $ gm branch
 ```
 
-##### Git Commit and Push)
+##### Git Commit and Push
 
 ```bash
 $ gcp "Message"
