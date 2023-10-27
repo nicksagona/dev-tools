@@ -1,2 +1,135 @@
-# dev-tools
-Dev Tools Bash Scripts
+# Dev Tools
+
+A collection of dev tools based in BASH. Includes helper scripts for:
+
+- Git
+- Composer
+- PHP
+
+It is recommended to copy the scripts to a folder in the `$PATH` environment variable.
+
+### Git
+
+##### Git Pull Origin
+
+Pull origin down to the current branch
+
+``bash
+$ gpo
+```
+
+##### Git Rebase Origin
+
+Fetch and rebase origin to the current branch
+
+``bash
+$ gro
+```
+
+##### Git Checkout Branch
+
+``bash
+$ gco branch
+```
+
+##### Git Create Branch
+
+``bash
+$ gcb branch
+```
+
+##### Git Commit (and Push)
+
+``bash
+$ gac "Message"
+```
+
+##### Git Stash
+
+``bash
+$ gst
+```
+
+##### Git Stash Pop
+
+``bash
+$ gpop
+```
+
+### Composer
+
+##### Install Composer
+
+```bash
+$ ci
+```
+
+##### Update Composer
+
+```bash
+$ cu
+```
+
+##### Require Composer Package
+
+```bash
+$ cr popphp/popphp
+```
+
+##### Clear Composer Cache
+
+```bash
+$ ccc
+```
+
+##### Remove Composer Installation
+
+This will remove the `composer.lock` file and `vendor` folder:
+
+```bash
+$ crm
+```
+
+Remove and clear the cache 
+
+```bash
+$ crm -c
+```
+
+### PHP
+
+##### Switch PHP Versions
+
+Use only if you have multiple versions of php in the `/usr/bin/` folder and `/usr/bin/php`
+is a symbolic link. It will manage the current version by deleting the symbolic link
+and creating a new one:
+
+``` text
+lrwxrwxrwx /usr/bin/php -> /usr/bin/php8.2
+-rwxr-xr-x /usr/bin/php7.3
+-rwxr-xr-x /usr/bin/php7.4
+-rwxr-xr-x /usr/bin/php8.1
+-rwxr-xr-x /usr/bin/php8.2
+```
+
+If Apache is utilized, it will attempt to set the correct Apache PHP module and restart Apache.
+
+Switch to an available version of PHP on the system:
+
+```bash
+$ sudo phpsw 8.2
+```
+
+##### Start the PHP Server
+
+Start `localhost:8000` in the current directory:
+
+```bash
+$ phpsrv
+```
+
+Start `localappdomain:8080` in the `public` directory:
+
+```bash
+$ phpsrv public localappdomain 8080
+```

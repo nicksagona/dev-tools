@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Git stash
+
+git stash

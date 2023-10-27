@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Install composer
+
+if [ ! -f "composer.json" ]; then
+    echo "The composer.json file does not exist."
+    exit 1
+fi
+
+composer install

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Git pull origin
+
+git pull origin

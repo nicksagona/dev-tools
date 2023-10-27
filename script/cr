@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Require composer package
+
+PKG=$1
+
+if [ -z $PKG ]; then
+    echo "You must enter a composer package."
+    exit 1
+fi
+
+composer require "$PKG"

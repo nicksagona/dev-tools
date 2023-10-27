@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Git add & commit
+
+MSG=$1
+BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [ -z $MSG ]; then
+    echo "You must enter a commit message."
+    exit 1
+fi
+
+git add . && git commit -m "$MSG" && git push origin "$BRANCH"

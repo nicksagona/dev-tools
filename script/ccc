@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Clear composer cache
+
+composer clear-cache
+echo "Composer cache cleared."

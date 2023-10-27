@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Start the PHP server
+
+FOLDER=$1
+HOST=$2
+PORT=$3
+
+if [ -z $FOLDER ]; then
+    FOLDER=.
+fi
+
+if [ -z $HOST ]; then
+    HOST=localhost
+fi
+
+if [ -z $PORT ]; then
+    PORT=8000
+fi
+
+if [ ! -d "$FOLDER" ]; then
+    echo "The folder does not exist."
+    exit 1
+fi
+
+php -S "$HOST:$PORT" -t "$FOLDER"

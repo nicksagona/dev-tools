@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Remove composer installation
+
+CLR=$1
+
+if [ -f "composer.lock" ]; then
+    rm -fr composer.lock
+fi
+
+if [ -d "vendor" ]; then
+    rm -fr vendor
+fi
+
+if [ "$CLR" == "-c" ]; then
+  composer clear-cache
+fi
+
+echo "Composer installation removed."

@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Switch to an available PHP version on the system
+
+VER=$1
+
+if [ -z $VER ]; then
+    echo "You must enter a PHP version."
+    exit 1
+fi
+
+if [ ! -f "/usr/bin/php$VER" ]; then
+    echo "PHP version $VER is not installed."
+    exit 1
+fi
+
+rm -f /usr/bin/php
+
+ln -s /usr/bin/php$VER /usr/bin/php
+if [ -d "/etc/apache2" ]; then
+  rm -f /etc/apache2/mods-enabled/php*
+  ln -s /etc/apache2/mods-available/php$VER.conf /etc/apache2/mods-enabled/php$VER.conf
+  ln -s /etc/apache2/mods-available/php$VER.load /etc/apache2/mods-enabled/php$VER.load
+  /etc/init.d/apache2 restart
+fi
+
+echo "Switched to PHP version $VER."
+
+
