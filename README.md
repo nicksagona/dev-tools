@@ -2,9 +2,9 @@
 
 A collection of dev tools based in BASH. Includes helper scripts for:
 
-- Git
-- Composer
-- PHP
+* [Git](#git)
+* [Composer](#composer)
+* [PHP](#php)
 
 It is recommended to copy the scripts to a folder in the `$PATH` environment variable.
 
@@ -107,6 +107,8 @@ $ gst
 $ gpop
 ```
 
+[Top](#dev-tools)
+
 ### Composer
 
 ##### Install Composer
@@ -147,6 +149,8 @@ Remove and clear the cache
 $ crm -c
 ```
 
+[Top](#dev-tools)
+
 ### PHP
 
 ##### Switch PHP Versions
@@ -184,3 +188,5 @@ Start `localappdomain:8080` in the `public` directory:
 ```bash
 $ phpsrv public localappdomain 8080
 ```
+
+[Top](#dev-tools)
