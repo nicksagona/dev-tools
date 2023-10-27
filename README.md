@@ -71,6 +71,12 @@ Delete remote branch
 $ gbr -rd branch
 ```
 
+Delete both local and remote branches
+
+```bash
+$ gbr -dd branch
+```
+
 ##### Git Prune Origin
 
 ```bash
