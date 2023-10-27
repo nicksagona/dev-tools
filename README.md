@@ -122,11 +122,20 @@ $ gp
 $ gcp "Message"
 ```
 
-
 ##### Git Status
 
 ```bash
 $ gs
+```
+
+##### Git Diff
+
+```bash
+$ gd
+```
+
+```bash
+$ gd file
 ```
 
 ##### Git Stash

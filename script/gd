@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Git diff
+
+FILE=$1
+
+if [ ! -z $FILE ]; then
+    git diff "$FILE"
+else
+    git diff
+fi
