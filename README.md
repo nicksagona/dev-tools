@@ -95,6 +95,12 @@ $ gm branch
 $ gcp "Message"
 ```
 
+##### Git Status
+
+```bash
+$ gs
+```
+
 ##### Git Stash
 
 ```bash

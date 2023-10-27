@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Git checkout new branch
+# Git prune remote
 
 LST=$1
 
