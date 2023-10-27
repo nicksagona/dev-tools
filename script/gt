@@ -1,0 +1,28 @@
+#!/bin/bash
+
+# Git tags
+
+PAR=$1
+TAG=$2
+
+if [ ! -z $PAR ]; then
+    if [[ "$PAR" == "-d" || "$PAR" == "-rd" || "$PAR" == "-dd" ]]; then
+        if [ -z $TAG ]; then
+            echo "You must enter a tag to delete."
+        else
+            if [ "$PAR" == "-dd" ]; then
+                git tag -d "$TAG"
+                git push origin --delete "$TAG"
+                echo "Deleted local and remote tag $TAG"
+            elif [ "$PAR" == "-rd" ]; then
+                git push origin --delete "$TAG"
+                echo "Deleted remote tag $TAG"
+            else
+                git tag -d "$TAG"
+                echo "Deleted local tag $TAG"
+            fi
+        fi
+    fi
+else
+    git tag
+fi

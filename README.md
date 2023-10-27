@@ -10,6 +10,20 @@ It is recommended to copy the scripts to a folder in the `$PATH` environment var
 
 ### Git
 
+##### Git Fetch Origin
+
+```bash
+$ gf
+```
+
+##### Git Rebase Origin
+
+Rebase to the current branch on origin
+
+```bash
+$ gr
+```
+
 ##### Git Pull Origin
 
 Pull origin down to the current branch
@@ -18,9 +32,9 @@ Pull origin down to the current branch
 $ gpo
 ```
 
-##### Git Rebase Origin
+##### Git Fetch & Rebase Origin
 
-Fetch and rebase origin to the current branch
+Fetch and rebase to the current branch on origin
 
 ```bash
 $ gro
@@ -124,6 +138,32 @@ $ gst
 
 ```bash
 $ gpop
+```
+
+##### Git List Tags
+
+```bash
+$ gt
+```
+
+##### Git Delete Tag
+
+Delete local tag
+
+```bash
+$ gt -d tag
+```
+
+Delete remote tag
+
+```bash
+$ gt -rd tag
+```
+
+Delete both local and remote tags
+
+```bash
+$ gt -dd tag
 ```
 
 [Top](#dev-tools)
