@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Run PHP Unit
+
+if [ ! -f "vendor/bin/phpunit" ]; then
+    echo "PHP Unit is not installed."
+    exit 1
+fi
+
+vendor/bin/phpunit

@@ -4,6 +4,7 @@ A collection of dev tools based in BASH. Includes helper scripts for:
 
 * [Git](#git)
 * [Composer](#composer)
+* [PHP Unit](#php-unit)
 * [PHP](#php)
 
 It is recommended to copy the scripts to a folder in the `$PATH` environment variable.
@@ -206,6 +207,16 @@ Remove and clear the cache
 
 ```bash
 $ crm -c
+```
+
+[Top](#dev-tools)
+
+### PHP Unit
+
+In order to run PHP Unit, it has to be installed in the current repositories `vendor` folder.
+
+```bash
+$ pu
 ```
 
 [Top](#dev-tools)
