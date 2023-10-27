@@ -14,7 +14,7 @@ It is recommended to copy the scripts to a folder in the `$PATH` environment var
 
 Pull origin down to the current branch
 
-``bash
+```bash
 $ gpo
 ```
 
@@ -22,37 +22,37 @@ $ gpo
 
 Fetch and rebase origin to the current branch
 
-``bash
+```bash
 $ gro
 ```
 
 ##### Git Checkout Branch
 
-``bash
+```bash
 $ gco branch
 ```
 
 ##### Git Create Branch
 
-``bash
+```bash
 $ gcb branch
 ```
 
 ##### Git Commit (and Push)
 
-``bash
+```bash
 $ gac "Message"
 ```
 
 ##### Git Stash
 
-``bash
+```bash
 $ gst
 ```
 
 ##### Git Stash Pop
 
-``bash
+```bash
 $ gpop
 ```
 
