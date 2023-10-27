@@ -89,11 +89,24 @@ $ gpr
 $ gm branch
 ```
 
+##### Git Commit
+
+```bash
+$ gc "Message"
+```
+
+##### Git Push
+
+```bash
+$ gp
+```
+
 ##### Git Commit and Push
 
 ```bash
 $ gcp "Message"
 ```
+
 
 ##### Git Status
 
