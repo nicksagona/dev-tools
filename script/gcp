@@ -5,7 +5,7 @@
 MSG=$1
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [ -z $MSG ]; then
+if [[ -z $MSG ]]; then
     echo "You must enter a commit message."
     exit 1
 fi
