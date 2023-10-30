@@ -11,6 +11,16 @@ It is recommended to copy the scripts to a folder in the `$PATH` environment var
 
 ### Git
 
+##### Git Clone
+
+```bash
+$ gcl git@github.com:username/repo.git
+```
+
+```bash
+$ gcl git@github.com:username/repo.git alt-name
+```
+
 ##### Git Fetch Origin
 
 ```bash

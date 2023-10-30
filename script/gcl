@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Git clone
+
+REPO=$1
+NAME=$2
+
+if [[ -z $REPO ]]; then
+    echo "You must enter a repository."
+    exit 1
+fi
+
+if [[ ! -z $NAME ]]; then
+    git clone "$REPO" "$NAME"
+else
+    git clone "$REPO"
+fi
