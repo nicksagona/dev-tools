@@ -14,14 +14,14 @@ if [ ! -f "/usr/bin/php$VER" ]; then
     exit 1
 fi
 
-rm -f /usr/bin/php
+sudo rm -f /usr/bin/php
 
-ln -s /usr/bin/php$VER /usr/bin/php
+sudo ln -s /usr/bin/php$VER /usr/bin/php
 if [ -d "/etc/apache2" ]; then
-  rm -f /etc/apache2/mods-enabled/php*
-  ln -s /etc/apache2/mods-available/php$VER.conf /etc/apache2/mods-enabled/php$VER.conf
-  ln -s /etc/apache2/mods-available/php$VER.load /etc/apache2/mods-enabled/php$VER.load
-  /etc/init.d/apache2 restart
+  sudo rm -f /etc/apache2/mods-enabled/php*
+  sudo ln -s /etc/apache2/mods-available/php$VER.conf /etc/apache2/mods-enabled/php$VER.conf
+  sudo ln -s /etc/apache2/mods-available/php$VER.load /etc/apache2/mods-enabled/php$VER.load
+  sudo /etc/init.d/apache2 restart
 fi
 
 echo "Switched to PHP version $VER."
