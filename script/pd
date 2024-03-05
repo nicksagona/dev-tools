@@ -7,4 +7,4 @@ if [ ! -d "vendor/popphp" ]; then
     exit 1
 fi
 
-/home/nick/bin/phpDocumentor.phar run -d vendor/popphp/ --ignore "vendor/popphp/pop-db/src/Sql/Migration/Template/" --ignore "vendor/popphp/pop-kettle/config/" -t /home/nick/Desktop/5.0
+~/bin/phpDocumentor.phar run -d vendor/popphp/ --ignore "vendor/popphp/pop-db/src/Sql/Migration/Template/" --ignore "vendor/popphp/pop-kettle/config/" -t /home/nick/Desktop/5.0
