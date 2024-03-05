@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Run PHP Doc for the Pop PHP Framework
+
+if [ ! -d "vendor/popphp" ]; then
+    echo "The Pop PHP Framework is not installed."
+    exit 1
+fi
+
+/home/nick/bin/phpDocumentor.phar run -d vendor/popphp/ --ignore "vendor/popphp/pop-db/src/Sql/Migration/Template/" --ignore "vendor/popphp/pop-kettle/config/" -t /home/nick/Desktop/5.0
