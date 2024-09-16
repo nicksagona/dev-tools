@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# PMA Site Up/Down
+
+CMD=$1
+
+if [[ "$CMD" != "up" ]] && [[ "$CMD" != "down" ]]; then
+    echo "You must enter a 'up' or 'down' command."
+    exit 1;
+fi
+
+if [[ "$CMD" == "up" ]]; then
+   echo "Bringing site up..."
+   rm httpdocs
+   ln -s httpdocs-pma httpdocs
+elif [[ "$CMD" == "down" ]]; then
+   echo "Bringing site down..."
+   rm httpdocs
+   ln -s httpdocs-403 httpdocs
+fi
+
+echo "Done!"
