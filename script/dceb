@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Run "docker compose exec web bash"
+
+WEB=$1
+
+if [[ -z $WEB ]]; then
+    WEB="web"
+fi
+
+docker compose exec "$WEB" bash
