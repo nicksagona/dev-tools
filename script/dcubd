@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Run "docker compose up --build -d"
+
+docker compose up --build -d
