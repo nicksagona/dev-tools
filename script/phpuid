@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# Generate an API key
+
+php -r "echo uniqid() . PHP_EOL;"
